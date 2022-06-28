@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.RegisterController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="root" stylesheets="@style.css">
+            <children>
+                <Label layoutX="250.0" layoutY="50.0" scaleX="2.0" scaleY="2.0" text="Registracija" />
+                <Label layoutX="50.0" layoutY="100.0" text="Vartotojo vardas:" />
+                <Label layoutX="50.0" layoutY="130.0" text="Slaptazodis:" />
+                <Label layoutX="50.0" layoutY="190.0" text="El. pastas:" />
+                <Label layoutX="50.0" layoutY="220.0" text="Administratorius?" />
+                <CheckBox fx:id="isAdminCheckBox" layoutX="150.0" layoutY="220.0" mnemonicParsing="false" />
+                <TextField fx:id="reUsername" layoutX="150.0" layoutY="100.0" />
+                <PasswordField fx:id="rePassword" layoutX="150.0" layoutY="130.0" />
+                <TextField fx:id="reEmail" layoutX="150.0" layoutY="190.0" />
+                <Button fx:id="reRegister" layoutX="180.0" layoutY="250.0" mnemonicParsing="false" onAction="#reOnRegisterButtonClick" text="Registruotis" />
+                <Label fx:id="reLoginStatus" layoutX="180.0" layoutY="290.0" />
+                <Label layoutX="50.0" layoutY="160.0" text="Pakartoti slaptazodi:" />
+                <PasswordField fx:id="reConfirmPassword" layoutX="165.0" layoutY="160.0" />
+            <Button fx:id="backButton" layoutX="493.0" layoutY="17.0" mnemonicParsing="false" onAction="#onBackButton" text="Grįžti atgal" />
+            </children>
+            <opaqueInsets>
+                <Insets />
+            </opaqueInsets>
+        </Pane>
+    </children>
+</GridPane>

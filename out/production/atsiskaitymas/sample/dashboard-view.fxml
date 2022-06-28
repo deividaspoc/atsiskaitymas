@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" styleClass="root" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.DashboardController">
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1280.0" minWidth="10.0" prefWidth="1280.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <BorderPane prefHeight="200.0" prefWidth="200.0" styleClass="root">
+            <center>
+                <Pane styleClass="LoginRegisterbutton" BorderPane.alignment="CENTER">
+                    <children>
+                        <TableView fx:id="firmTableView" layoutX="-5.0" layoutY="-4.0" prefHeight="633.0" prefWidth="954.0">
+                            <columns>
+                        <TableColumn fx:id="idColumn" prefWidth="132.0" text="id" />
+                                <TableColumn fx:id="nameColumn" prefWidth="308.0" text="Maitinimo įstaiga" />
+                                <TableColumn fx:id="codeColumn" prefWidth="212.0" text="Kodas" />
+                                <TableColumn fx:id="addressColumn" prefWidth="124.0" text="Adresas" />
+                            </columns>
+                        </TableView>
+                    </children></Pane>
+            </center>
+            <left>
+                <Pane prefHeight="629.0" prefWidth="331.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField fx:id="nameField" layoutX="43.0" layoutY="100.0" prefHeight="35.0" prefWidth="240.0" promptText="Maitinimo įstaigos pavadinimas">
+                            <font>
+                                <Font size="13.0" />
+                            </font></TextField>
+                        <Label fx:id="status" alignment="CENTER" layoutX="8.0" layoutY="498.0" prefHeight="19.0" prefWidth="310.0" text="" textFill="#c94e24">
+                            <font>
+                                <Font size="13.0" />
+                            </font></Label>
+
+                        <Label fx:id="statusLabel" layoutX="4.0" layoutY="563.0" prefHeight="17.0" prefWidth="316.0" />
+                  <TextField fx:id="codeField" layoutX="43.0" layoutY="154.0" prefHeight="35.0" prefWidth="240.0" promptText="Maitinimo įstaigos kodas">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="addressField" layoutX="43.0" layoutY="207.0" prefHeight="35.0" prefWidth="240.0" promptText="Maitinimo įstaigos adresas">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="createButton" layoutX="43.0" layoutY="425.0" mnemonicParsing="false" onAction="#onCreateButtonClick" text="Pridėti įrašą" />
+                  <Button fx:id="SearchButton" layoutX="41.0" layoutY="463.0" mnemonicParsing="false" onAction="#onSearchButtonClick" prefHeight="25.0" prefWidth="149.0" text="Ieškoti/atnaujinti įrašus" />
+                  <TextField fx:id="idField" layoutX="43.0" layoutY="49.0" prefHeight="35.0" prefWidth="240.0" promptText="Maitinimo įstaigos id">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </TextField>
+                  <Button fx:id="createButton1" layoutX="127.0" layoutY="425.0" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Redaguoti įrašą pagal id" />
+                  <Button layoutX="41.0" layoutY="505.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Ištrinti įrašą pagal id" />
+                  <Button layoutX="45.0" layoutY="586.0" mnemonicParsing="false" onAction="#onToMenuButton" text="Valgiaraščiai" />
+                    </children></Pane>
+            </left>
+            <top>
+                <Pane prefHeight="91.0" prefWidth="1008.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="570.0" layoutY="15.0" stylesheets="@style.css" text="Maisto užsakymas" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="42.0" />
+                            </font>
+                     <styleClass>
+                        <String fx:value="root" />
+                        <String fx:value="LoginRegisterbutton" />
+                        <String fx:value="LoginRegisterbutton" />
+                     </styleClass>
+                        </Label>
+                        <Label layoutX="976.0" layoutY="46.0" text="PRISIJUNGIMO VARDAS" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Label layoutX="1083.0" layoutY="66.0" text="GRUPĖ" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                        </Label>
+                        <Button fx:id="logOutButton" layoutX="1168.0" layoutY="7.0" mnemonicParsing="false" onAction="#onLogOutButtonClick" prefHeight="30.0" prefWidth="106.0" styleClass="LoginRegisterbutton" text="ATSIJUNGTI" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Label fx:id="groupLabel" alignment="CENTER" layoutX="1132.0" layoutY="65.0" prefHeight="19.0" prefWidth="142.0" styleClass="LoginRegisterbutton" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="usernameLabel" alignment="CENTER" layoutX="1132.0" layoutY="45.0" prefHeight="19.0" prefWidth="142.0" styleClass="LoginRegisterbutton" textFill="WHITE">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="wishlistLabel" layoutX="38.0" layoutY="38.0" />
+                    </children></Pane>
+            </top>
+        </BorderPane>
+    </children>
+    <stylesheets>
+        <URL value="@style.css" />
+        <URL value="@style.css" />
+    </stylesheets>
+</GridPane>

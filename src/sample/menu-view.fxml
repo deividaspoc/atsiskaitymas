@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="563.0" prefWidth="884.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller.MenuController">
+    <children>
+        <GridPane prefHeight="419.0" prefWidth="614.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+
+            </rowConstraints>
+            <children>
+                <Pane prefHeight="406.0" prefWidth="618.0" stylesheets="@style.css">
+                    <children>
+                        <TableView fx:id="bookedBooks" layoutX="25.0" layoutY="35.0" prefHeight="350.0" prefWidth="548.0">
+                            <columns>
+                                <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
+                                <TableColumn fx:id="nameColumn" prefWidth="208.0" text="Valgiaraščio pavadinimas" />
+                            </columns>
+                        </TableView>
+                        <Button fx:id="backButton" alignment="CENTER" layoutX="775.0" layoutY="17.0" mnemonicParsing="false" onAction="#onBackButton" prefHeight="37.0" prefWidth="82.0" text="Atgal" />
+                  <TextField fx:id="idField" layoutX="599.0" layoutY="90.0" promptText="Valgiaraščio id" />
+                  <TextField layoutX="599.0" layoutY="134.0" promptText="Valgiaraščio pavadinimas" />
+                  <Button layoutX="599.0" layoutY="175.0" mnemonicParsing="false" text="Pridėti įrašą" />
+                  <Button layoutX="697.0" layoutY="175.0" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Ištrinti įrašą pagal id" />
+                    </children>
+               <styleClass>
+                  <String fx:value="LoginRegisterbutton" />
+                  <String fx:value="root" />
+               </styleClass></Pane>
+            </children>
+        </GridPane>
+    </children>
+</VBox>
